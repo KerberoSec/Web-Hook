@@ -9,7 +9,7 @@
     <p>This is a normal page.</p>
 
     <script>
-        const VALUE_GREATER_THAN_TTL = 121; // Wait so DNS rebinding switches
+        const VALUE_GREATER_THAN_TTL = 121000; // Wait so DNS rebinding switches
         setTimeout(() => {
             fetch('/flag')
                 .then(response => response.text())
